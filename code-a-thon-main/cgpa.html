@@ -1,0 +1,284 @@
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="menu-btn">
+    <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar" >
+   <div class="close-btn">
+            <i class="fas fa-times"></i>  
+
+                 
+                  </div>
+                    <div class="menu">
+                        <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/index.html"><i class="fas fa-desktop"></i>Profile</a></div>
+                        <div class="item">
+                            <a class="sub-btn" href="https://adityasuman990.github.io/code-a-thon/cgpa.html" ><i class="fas fa-table"></i>CGPA Calculator</a>
+                           
+                        </div>
+                        <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/lib.html"><i class="fas fa-th"></i>Library</a></div>
+                      
+                        <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/about.html"><i class="fas fa-info-circle"></i>About</a></div>
+                    </div>
+                </div>
+    
+      
+       <ul class="dark" > Dark Mode </ul> <input type="checkbox" name="" id="todo">
+        
+              <div id="lcol" class="main">
+               <div id="doc" class=" p-3 ">
+            
+                  <div class="p-3">
+    
+                <h1 class="headline">CGPA Calculator</h1>
+                <form id="calcform" name="calcform" class="calc" autocomplete="off">
+                <table id="tbl">
+                    <tr>
+                        <td>Subjects</td>
+                        <td>Grade</td>
+                        <td>Credits</td>
+                    </tr>
+                    <tbody>
+                    </tbody>
+                </table>
+               <div id="cumdiv" class=" p-3 form-group"  >
+             
+               <div class="form-group"  class="mb-1">
+                  <button type="button" id="calcbtn" title="Calculate" class="btn btn-outline-dark"  > Calculate</button>
+                  <button type="reset" id="resetbtn" title="Reset"  class="btn btn-outline-dark"> Reset</button>
+                  <button type="button" id="addrow" title="Add row" class="btn btn-outline-dark"> Row</button>
+               </div>
+               <div class="form-group">
+                  <label for="gpa">CGPA</label>
+                  <input type="text" id="gpa" readonly class="form-control">
+               </div>
+               <div class="form-group">
+                  <div id="gpacircle" class="red small mb-3"></div>
+               </div>
+               <div class="form-group">
+                  <label for="total">Total credits</label>
+                  <input type="number" step="any" id="total" class="form-control" readonly>
+               </div>
+               <div class="form-group">
+                  <label for="area">CGPA calculation</label>
+                  <input rows="3" id="area" class="form-control" readonly>
+               </div>
+                </form>  
+          </div>
+            
+    
+    </div>
+    </div>
+    
+    
+    <style>
+    
+    .dark{
+      margin-left: 1145px;
+      font-weight: bold;
+    }
+    
+    #todo{
+      margin-left: 1230px;
+    }
+    
+    .main{
+       background: linear-gradient(132deg, rgb(251, 165, 116) 0.00%, rgb(216, 245, 251) 100.00%);
+    }
+    body{
+      background: linear-gradient(132deg, rgb(251, 165, 116) 0.00%, rgb(216, 245, 251) 100.00%);
+    }
+    
+    tr{
+        text-align: center;
+        color: black;
+        font-size: large;
+    }
+    
+    .headline{
+      text-align: center;
+      padding: 15px;
+      text-decoration: solid;
+      text-shadow: 10px;
+      font-size: 72px;
+      background: linear-gradient(132deg, rgb(0, 48, 143) 0.00%, rgb(0, 255, 255) 100.00%);  
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+    
+    #todo:checked ~ .main{
+      background: linear-gradient(106deg, rgb(65, 80, 95) 0.00%, rgb(36, 37, 38) 85.20%);
+      color: white;
+      
+    }
+    .dark{
+      align-items: center;
+    }
+    
+    
+    
+    
+    
+    
+    </style>
+    
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+         var irow=0;
+       $( document ).ready(function() {
+          $("#calcbtn").click( Calc );
+          $("#resetbtn").click( OnReset );
+          $("#addrow").click( AddRow );
+          $("#calcbtn2").click( Calc2 );
+          for(i=0; i<6; i++)
+             AddRow();
+       });
+       function OnReset()
+       {
+          $("#gpacircle").hide();
+       }
+       function Calc()
+       {
+          var glook=[11,10,9,8,7,6,5,4,3,2,1];
+          var gpa=0;
+          var sum=0;
+          var txt1="";
+          var txt2="";
+          for(var i=1; i<=irow+1; i++)
+          {
+             hours = $("#tbl > tbody > tr:nth-child("+i+") > td:nth-child(3) > input").val();
+             hours = parseFloat(hours);
+             igrade = $("#tbl > tbody > tr:nth-child("+i+") > td:nth-child(2) > select").prop("selectedIndex");
+             grade = glook[igrade];
+             if( hours>0 && grade>=0 )
+             {
+                gpa+=hours*grade;
+                sum+=hours;
+                txt1+=hours+"\u00D7"+grade+"+";
+                txt2+=hours+"+";
+             }
+          }
+          cgpa=$("#cgpa").val();
+          chours=$("#chours").val();
+          cgpa = parseFloat(cgpa);
+          chours = parseFloat(chours);
+          if( cgpa>=0 && chours>0 )
+          {
+             gpa+=chours*cgpa;
+             sum+=chours;
+             txt1+=chours+"\u00D7"+cgpa+"+";
+             txt2+=chours+"+";
+          }
+          gpa/=sum;
+          gpa=gpa.toFixed(2);
+          txt1=txt1.slice(0, -1);
+          txt2=txt2.slice(0, -1);
+          var txt="("+txt1+") / ("+txt2+") = "+gpa;
+          $("#gpa").val(gpa);
+          $("#total").val(sum);
+          $("#area").val(txt);
+          var percent=25*gpa;
+          if( percent>100 ) percent=100;
+          $("#gpacircle").percircle({percent: percent,text: gpa});
+          $("#gpacircle").show();
+       }
+       function AddRow()
+       {
+          $('#tbl > tbody > tr').eq(irow++).after("<tr>\
+             <td><input type='text' name='class[]' class='form-control' placeholder='class "+irow+"'></td>\
+             <td><select name='grade[]' class='form-control'>\
+                <option selected>--</option>\
+                <option>O</option>\
+                <option>A+</option>\
+                <option>A</option>\
+                <option>B+</option>\
+                <option>B</option>\
+                <option>C+</option>\
+                <option>C</option>\
+                <option>D+</option>\
+                <option>D</option>\
+                <option>F</option>\
+                <option>P</option>\
+                <option>NP</option>\
+             </select></td>\
+             <td><input type='number' min='0' step='any' name='hours[]' class='form-control'></td>\
+          </tr>");
+       }
+       function GetLetterFromGPA(gpa)
+       {
+          var letter="";
+          var lettertbl=['O','A+','A','B+','B','C+','C','D+','D','F'];
+          var gpatbl=[11,10,9,8,7,6,5,4,3,2,1];
+          for(var i=0; i<gpatbl.length; i++)
+             if( gpa>=gpatbl[i] )
+             {
+                letter = lettertbl[i];
+                break;
+             }
+          return letter;
+       }
+       function Calc2()
+       {
+          var cgpa=parseFloat($("#curgpa").val());
+          var tgpa=parseFloat($("#tgpa").val());
+          var chours=parseFloat($("#curhours").val());
+          var ahours=parseFloat($("#ahours").val());
+          var h=chours+ahours;
+          var fgpa=(h*tgpa-chours*cgpa)/ahours;
+          var flet=GetLetterFromGPA(fgpa);
+          $("#fgpa").val(fgpa.toFixed(2));
+          $("#flet").val(flet);
+          var percent=25*fgpa;
+          if( percent>100 ) percent=100;
+          $("#finalcircle").percircle({percent: percent,text: flet});
+          $("#finalcircle").show();
+       }
+    
+    </script>
+    
+    
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+    });
+
+    $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden")
+    });
+
+
+    $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible")
+    });
+    });
+    
+
+
+</script>
+
+</body>
+</html>

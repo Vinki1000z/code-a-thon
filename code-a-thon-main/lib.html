@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LIBRARY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="slide.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="utf-8"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+
+
+<div class="menu-btn"  style="color:black;" >
+  <i class="fas fa-bars"></i>
+      </div>
+      <div class="side-bar" >
+     <div class="close-btn"  style="color:black;" >
+              <i class="fas fa-times"></i>  
+  
+                   
+                    </div>
+                      <div class="menu">
+                          <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/index.html"><i class="fas fa-desktop"></i>Profile</a></div>
+                          <div class="item">
+                              <a class="sub-btn" href="https://adityasuman990.github.io/code-a-thon/cgpa.html" ><i class="fas fa-table"></i>CGPA Calculator</a>
+                             
+                          </div>
+                          <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/lib.html"><i class="fas fa-th"></i>Library</a></div>
+                            
+                          <div class="item"><a href="https://adityasuman990.github.io/code-a-thon/about.html"><i class="fas fa-info-circle"></i>About</a></div>
+                      </div>
+                  </div>
+      
+        
+
+
+
+<body>
+
+
+    <div name="h" class="head">
+        
+       
+       
+        <div class="nav"  >
+            <div >
+                <img  style="margin-left: 450px;"  class="logo" src="./img/logo.png" alt="">
+            </div>
+            <div class="square">
+                <h4>SRM.</h4>
+            </div>
+            <div class="square2">
+                <h4>LIBRARY</h4>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <img src="./img/library-page-3.jpg" alt="">
+    </div>
+    <div class="top">
+        <div class="heading">
+            <h4>What are You Lookin’ at?</h4>
+        </div>
+        <hr class="hr1">
+    </div>
+    <!--  boxa start -->
+    <div class="container box ">
+
+        <div class="box_1 category category2">
+            <select class="form-select cat" aria-label="Default select example">
+                <option selected>Select The category</option>
+                <option value="cs">Computer Science Engineering</option>
+                <option value="maths">Mathematics</option>
+                <option value="mag">Magazine</option>
+                <option value="mec">Mechanical Engineering</option>
+            </select>
+        </div>
+        <div class="box_2 type type2">
+
+            <select class="form-select main_t" aria-label="Default select example">
+                <option selected>Select the Type</option>
+
+            </select>
+            <select class="form-select cs" aria-label="Default select example">
+                <option selected>Select the Type</option>
+                <option value="a"> Computer Organization and Architecture</option>
+                <option value="b">Data Structures and Algorithms</option>
+                <option value="c">Programming languages</option>
+                <option value="d">Database Management System </option>
+            </select>
+            <select class="form-select maths" aria-label="Default select example">
+                <option selected>Select the Type</option>
+                <option value="a"> Discrete mathematics</option>
+                <option value="b">Quantitative math</option>
+                <option value="c">Calculus</option>
+                <option value="d">Arithmetic </option>
+            </select>
+            <select class="form-select mag" aria-label="Default select example">
+                <option selected>Select the Type</option>
+                <option value="a">Tech Magazines</option>
+                <option value="b">Health Magazines</option>
+                <option value="c">Business Magazines</option>
+                <option value="d">General News Magazines </option>
+            </select>
+            <select class="form-select mec" aria-label="Default select example">
+                <option selected>Select the Type</option>
+                <option value="a">Biotechnology</option>
+                <option value="b">Composites</option>
+                <option value="c">Automation</option>
+                <option value="d">GAerospace</option>
+            </select>
+        </div>
+        <div class="box_3 box_btn box_btn2">
+            <button type="button" class="btn btn-primary search">Search Book</button>
+            <button type="button" class="btn btn-primary reset">Reset Values</button>
+            <!-- <hr class="hr2"> -->
+        </div>
+
+    </div>
+    <!-- box 2 start -->
+    <div class="container list">
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Name Of The Book </th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Available</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider" id="table">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="review">
+        <div class="req">
+              <button type="button" class="btn btn-primary reset request">Request For Book</button>
+        </div>
+        <div class="container ">
+            <form class="req_form">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name Of The book And Author</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary req_submit"> Submit </button>
+                
+              </form>
+              <div class="first"> <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Your request was  <strong>successfully</strong> submitted
+                 <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>
+             </div>
+        </div>
+      
+
+    </div>
+   
+    <div class="footer">
+        <div class="foot1 foot_h">
+            <img class="foot_img" src="./img/logo2.png" alt="">
+        </div>
+        <div class="foot2 foot_h">
+            <div class="phone_no phone_c">
+                <img src="./img/phone_call.png" alt="">
+                <div class="text">+91 44 27417000</div>
+            </div>
+            <div class="phone_no phone_c">
+                <img  src="./img/whatsapp.png" alt="">
+                <div class="text">+91 44 27417499</div>
+            </div>
+            <div class="phone_no phone_c">
+                <img src="./img/email.png" alt="">
+                <div  class="text ">infodesk@srmist.edu.in</div>
+            </div>
+        </div>
+        <div class="foot3 foot_h">
+            <div class="one">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+            </div>
+            <div class="two">
+                <button type="button" class="btn btn-warning">Stay In Touch</button>
+            </div>
+        </div>
+    </div>
+    <div class="lower">
+        <div class="lower1">Terms Of Use </div>
+        <div class="lower2"> Copyrights All Rights Reserved </div>
+        <div class="lower3">
+            <div class="l1">
+                <img src="./img/fb2.png" alt="">
+            </div>
+            <div class="l1">
+                <img src="./img/in4.png" alt="">
+            </div>
+            <div class="l1">
+                <img src="./img/tw.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+* {
+    margin: 0px;
+    padding: 0px;
+  
+}
+body{
+    background: linear-gradient(148deg, rgb(251, 251, 255) 0.00%, rgb(215, 223, 252) 69.90%);}
+        
+
+.nav_search {
+    display: inline-block;
+    left: 70%;
+}
+
+.heading {
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.hr1 {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 6px solid;
+    opacity: 0.75;
+}
+
+/*  box 1 start */
+.box {
+    /* border: 2px solid red; */
+    height: 12rem;
+    width: 100%;
+}
+
+ .category {
+    /* position: absolute; */
+    /* top: 45em;
+    left: 5em; */
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+
+.type {
+ 
+    width: 70%;
+    
+    margin: auto;
+    margin-top: 20px;
+
+} 
+
+.type_btn {
+    margin-left: 37px;
+    margin-top: 20px;
+
+}
+
+.box_btn {
+  
+    margin-top: 20px;
+    margin-left: 12em;
+}
+
+.list{
+    margin-top: 20px;
+    border: 4px solid#008BFF;
+    border-radius: 25px;
+    box-shadow:5px 5px 10px 0px;
+    height: 20em;
+}
+
+
+.nav{
+
+    width: 100%;
+    height: 50px;
+}
+.square{
+    background-color:#008BFF;
+    width: 7%;
+    text-align: center;
+    text-justify: auto;
+    color: white;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    border-radius: 20px 0px 0px 20px;
+}
+.square2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #36a4ff;
+    padding-left: 16px;
+    padding-right: 15px;
+    color:#36a4ff;
+    border-radius: 0px 20px 20px 0px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.footer{
+  
+    height: 15em;
+    display: flex;
+
+    align-items: center;
+}
+.foot_img{
+    margin-left: 13px;
+    width: 19em;
+    height: 7em;
+}
+
+.foot2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16em;
+}
+
+.phone_no{
+    display: flex;
+    margin-top: 25px;
+    
+}
+.text{
+    margin-left: 20px;
+}
+.whatsapp{
+    width: 30px;
+    height: 30px;
+}
+.foot3{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.one{
+    margin-top: 17px;
+    width: 25em;
+}
+.two{
+    margin-left: 5px;
+}
+.lower{
+  
+    background-color: #008BFF;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.lower1{
+  
+    margin-left:10px
+}
+.lower3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.l1{
+    margin-left: 10px;
+}
+.head{
+    margin:20px
+}
+.req{
+    margin-left: 76em;
+    margin-top: 1em;
+    
+}
+
+
+.first{
+    margin-top: 10px;
+}
+
+
+    </style>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+        <script>
+            console.log("this is my lib");
+let cs = document.getElementsByClassName("cs");
+let maths = document.getElementsByClassName("maths");
+let mag = document.getElementsByClassName("mag");
+let mec = document.getElementsByClassName("mec");
+let cat = document.getElementsByClassName("cat");
+var search = document.getElementsByClassName("search");
+let main_t = document.getElementsByClassName("main_t");
+let btn = document.getElementsByClassName("reset");
+let request = document.getElementsByClassName("request");
+let req_form=document.getElementsByClassName("req_form");
+let req_submit=document.getElementsByClassName("req_submit");
+let close=document.getElementsByClassName("close");
+let box_1=document.getElementsByClassName("box_1");
+let box_2=document.getElementsByClassName("box_3");
+let box_3=document.getElementsByClassName("box_3");
+let first=document.getElementsByClassName("first");
+console.log(first);
+let table = document.getElementById("table");
+cs[0].style.display = "none";
+maths[0].style.display = "none";
+mec[0].style.display = "none";
+mag[0].style.display = "none";
+main_t[0].style.display = "block";
+
+req_form[0].style.display = "none";
+first[0].style.display = "none";
+
+
+
+
+
+let cs_coa = [
+  {
+    name: "Computer Fundamentals Architecture and Organization",
+    author: " Ram B",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Fundamentals of Computer Organization",
+    author: "Hesham El-Rewini",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Organization and Design",
+    author: "Sivarama P Dandamudi",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Creating a Data–Drivens",
+    author: " Carl Anderson",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let cs_dsa = [
+  {
+    name: "Introduction to Algorithms",
+    author: "Thomas H. Cormen",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Data Structures and Algorithms Made Easy",
+    author: "Narsimha Karumanchi",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Algorithms",
+    author: "Robert Sedgewick and Kevin Wayne",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Grokking Algorithms",
+    author: "Aditya Bhargava",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+
+let cs_pl = [
+  {
+    name: "Clean Code",
+    author: "Robert C. Martin",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Design Patterns",
+    author: "Eric Gamma",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Refactoring, Improving The Design ",
+    author: "Martin Fowler ",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: " Introduction to Algorithms",
+    author: "Thomas H. Cormen",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let cs_db = [
+  {
+    name: "Database System Concept",
+    author: "Abraham Silberschatz ",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Introduction to Database Management Systems",
+    author: "Kahate",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Data Structures and Algorithms Made Easy",
+    author: " Bipin Desai",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Principles of Database Systems",
+    author: " J D Ullman",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let maths_coa = [
+  {
+    name: "Discrete Mathematics and Its Applications",
+    author: " Kenneth Rosen",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Essential Discrete Mathematics",
+    author: " Harry Lewis",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Journey into Discrete Mathematics",
+    author: "Owen D. Byer,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Discrete Mathematics for Computer Science",
+    author: " J D Ullman",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let maths_dsa = [
+  {
+    name: "Quantitative Aptitude for Competitive Examination",
+    author: " Dr R.S. Aggarwal",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Fast Track Objective Arithmetic Paperback",
+    author: "Rajesh Verma",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Teach Yourself Quantitative Aptitude",
+    author: "Owen D. Byer,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "The Pearson Guide To Quantitative Aptitude",
+    author: " J D Ullman",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let maths_pl = [
+  {
+    name: "James Stewart's CALCULUS",
+    author: "Stewart,",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Fast Track Objective Arithmetic Paperback",
+    author: "Rajesh Verma",
+    rating: "3/5",
+    Available: "Available",
+  },
+  {
+    name: "Thomas' Calculus: Early Transcendentals",
+    author: "Hass Joel ,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "The Pearson Guide To Quantitative Aptitude",
+    author: " Morris Kline",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+];
+let maths_db = [
+  {
+    name: "James Stewart's CALCULUS:",
+    author: "Ste wart,",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Fast Paperback",
+    author: "Rajesh Verma",
+    rating: "3/5",
+    Available: "Available",
+  },{
+    name: "The Pearson Guide  Aptitude",
+    author: " Morris Kline",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "Early Transcendentals",
+    author: "Joel ,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  }
+  
+];
+let mag_coa = [
+  {
+    name: "Low-tech Magazine",
+    author: "Morris Kline,",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Fast Paperback",
+    author: "Rajesh Verma",
+    rating: "3/5",
+    Available: "Available",
+  },{
+    name: "Read Low-tech Magazine Offline",
+    author: " Joe",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "A do-it-ourselves guid",
+    author: "Rajesh Verma",
+    rating: "4.5/5",
+    Available: "Not Available",
+  }
+  
+];
+let mag_dsa = [
+  {
+    name: "Glucose Revolution",
+    author: " Jessie Inchauspé ",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "How Not to Die",
+    author: "Michael Greger ",
+    rating: "3/5",
+    Available: "Available",
+  },{
+    name: "Atomic Habits",
+    author: " James Clear ",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "The Obesity Code ",
+    author: " Dr. Jason Fung ",
+    rating: "4.5/5",
+    Available: "Not Available",
+  }
+  
+];
+let mag_pl = [
+  {
+    name: "	Exchange Rates",
+    author: " A. V. Rajwade ",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Business Standard General Awareness ",
+    author: "Michael PO ",
+    rating: "3/5",
+    Available: "Available",
+  },{
+    name: "	Uncornered",
+    author: "Luci Clear ",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "The Code ",
+    author: " Dr. David Fung ",
+    rating: "4.5/5",
+    Available: "Not Available",
+  }
+  
+];
+let mag_db = [
+  {
+    name: "News And Events ",
+    author: " Dr. David Fung ",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "	India Today",
+    author: " A. V. Rajwade ",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "	The Frontline",
+    author: "Luci Clear ",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "Chronicle",
+    author: "Michael PO ",
+    rating: "3/5",
+    Available: "Available",
+  },
+  
+  
+];
+let mec_coa = [
+  {
+    name: "A Textbook of Modern Toxicology ",
+    author: "Hodgson",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Regenesis ",
+    author: " A. V. Raju",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "	The Frontline",
+    author: "George Church and Ed Regis ",
+    rating: "3.5/5",
+    Available: "Available",
+  },
+  {
+    name: "Genentech: The Beginnings of Biotech",
+    author: "Sally Smith Hughes",
+    rating: "3/5",
+    Available: "Available",
+  },
+  
+  
+];
+let mec_dsa = [{
+    name: "James Stewart's CALCULUS",
+    author: "Stewart,",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "A Textbook of Modern Toxicology ",
+    author: "Hodgson",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Regenesis ",
+    author: " A. V. Raju",
+    rating: "4/5",
+    Available: "Available",
+  },
+  
+  {
+    name: "Thomas' Calculus: Early Transcendentals",
+    author: "Hass Joel ,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  
+  
+];
+let mec_pl = [{
+    name: "Rise of the Robots",
+    author: "Martin Ford,",
+    rating: "4/5",
+    Available: "Available",
+  },
+  {
+    name: "Superintelligence ",
+    author: "Nick Bostrom",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  {
+    name: "Regenesis ",
+    author: " A. V. Raju",
+    rating: "4/5",
+    Available: "Available",
+  },
+  
+  {
+    name: "Player Piano",
+    author: "Kurt Vonnegut Jr. ,",
+    rating: "4.5/5",
+    Available: "Not Available",
+  },
+  
+  
+];
+
+
+var value;
+cat[0].addEventListener("click", (e) => {
+  var cat_v = cat[0].value;
+  console.log("this is the value of cat");
+  console.log(cat_v);
+  if (cat_v === "cs") {
+    value = 1;
+    console.log(value);
+    cs[0].style.display = "block";
+    maths[0].style.display = "none";
+    mec[0].style.display = "none";
+    mag[0].style.display = "none";
+    main_t[0].style.display = "none";
+  } else if (cat_v === "maths") {
+    value = 2;
+    console.log(value);
+
+    cs[0].style.display = "none";
+    maths[0].style.display = "block";
+    mec[0].style.display = "none";
+    mag[0].style.display = "none";
+    main_t[0].style.display = "none";
+  } else if (cat_v === "mag") {
+    value = 3;
+    console.log(value);
+
+    cs[0].style.display = "none";
+    maths[0].style.display = "none";
+    mec[0].style.display = "none";
+    mag[0].style.display = "block";
+    main_t[0].style.display = "none";
+  } else if (cat_v === "mec") {
+    value = 4;
+    console.log(value);
+    cs[0].style.display = "none";
+    maths[0].style.display = "none";
+    mec[0].style.display = "block";
+    mag[0].style.display = "none";
+    main_t[0].style.display = "none";
+  } else {
+    cs[0].style.display = "none";
+    maths[0].style.display = "none";
+    mec[0].style.display = "none";
+    mag[0].style.display = "none";
+    main_t[0].style.display = "block";
+  }
+
+  e.preventDefault();
+});
+
+let type;
+search[0].addEventListener("click", (e) => {
+ 
+
+  if (value === 1) {
+    type = cs[0].value;
+    if (type === "a") {
+      let html = "";
+      cs_coa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "b") {
+      let html = "";
+      cs_dsa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "c") {
+      let html = "";
+      cs_pl.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "d") {
+      let html = "";
+      cs_db.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    }
+  } else if (value === 2) {
+    type = maths[0].value;
+    if (type === "a") {
+      let html = "";
+      maths_coa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "b") {
+      let html = "";
+      maths_dsa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "c") {
+      let html = "";
+      maths_pl.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "d") {
+      let html = "";
+      maths_db.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    }
+  } else if (value === 3) {
+    type = mag[0].value;
+    if (type === "a") {
+      let html = "";
+mag_coa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "b") {
+      let html = "";
+mag_dsa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "c") {
+      let html = "";
+      mag_pl.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "d") {
+      let html = "";
+    mag_db.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    }
+  } else if (value === 4) {
+    type = mec[0].value;
+    if (type === "a") {
+      let html = "";
+      mec_coa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "b") {
+      let html = "";
+      mec_dsa.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "c") {
+      let html = "";
+      mec_pl.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    } else if (type === "d") {
+      let html = "";
+      cs_db.forEach((ele) => {
+        html += `
+              <tr>
+          
+              <td>${ele.name}</td>
+              <td>${ele.author}</td>
+              <td>${ele.rating}</td>
+              <td>${ele.Available}</td>
+          </tr>
+              `;
+      });
+      table.innerHTML = html;
+    }
+  }
+  e.preventDefault();
+});
+
+
+btn[0].addEventListener("click",(e)=>{
+  cs[0].style.display = "none";
+maths[0].style.display = "none";
+mec[0].style.display = "none";
+mag[0].style.display = "none";
+main_t[0].style.display = "block";
+cat[0].value="Select The category";
+table.innerHTML = "";
+  e.preventDefault();
+})
+request[0].addEventListener("click",(e)=>{
+  console.log("clicked");
+  req_form[0].style.display="block";
+  e.preventDefault();
+})
+req_submit[0].addEventListener("click",(e)=>{
+  console.log("clicked");
+first[0].style.display = "block";
+req_form[0].style.display = "none";
+  e.preventDefault();
+})
+
+        </script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $('.sub-btn').click(function(){
+      $(this).next('.sub-menu').slideToggle();
+      $(this).find('.dropdown').toggleClass('rotate');
+  });
+
+  $('.menu-btn').click(function(){
+      $('.side-bar').addClass('active');
+      $('.menu-btn').css("visibility", "hidden")
+  });
+
+
+  $('.close-btn').click(function(){
+      $('.side-bar').removeClass('active');
+      $('.menu-btn').css("visibility", "visible")
+  });
+  });
+  
+
+
+</script>
+</body>
+
+</html>
